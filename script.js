@@ -124,7 +124,7 @@ function orderNow() {
   let product = document.getElementById("popupName").innerText;
   let price = document.getElementById("popupPrice").innerText;
 
-  let baseURL = "https://your-website-name.vercel.app/"; // change after deploy
+  let baseURL = "https://mousume6297.github.io/FUTURE_FS_03/"; // change after deploy
 
   let imgPath = document.getElementById("popupImg").getAttribute("src");
   let img = baseURL + imgPath;
