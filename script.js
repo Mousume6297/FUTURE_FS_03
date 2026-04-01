@@ -139,7 +139,7 @@ ${img}
 
 Please share more details.`;
 
-  let phoneNumber = "918459403873";
+  let phoneNumber = "YOUR_PHONE_NUMBER";
 
   let url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
