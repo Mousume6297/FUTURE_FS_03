@@ -88,3 +88,12 @@ Mousume Barick
 This is a demo project for learning and portfolio purposes.
 Orders are handled manually via WhatsApp.
 
+---
+
+## 📞 Important Note on Contact
+
+For privacy and security reasons, the WhatsApp contact number is not included in this repository.
+
+To use the project fully, please replace `"YOUR_PHONE_NUMBER"` in the code with your own WhatsApp number.
+
+
