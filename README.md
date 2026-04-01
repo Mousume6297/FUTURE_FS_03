@@ -30,22 +30,6 @@ This project focuses on clean UI, smooth user experience, and simple ordering wi
 
 ---
 
-## 📂 Project Structure
-
-```
-TrendyThreads/
-│
-├── index.html
-├── style.css
-├── script.js
-├── images/
-│   ├── products/
-│   └── logo/
-└── README.md
-```
-
----
-
 ## 📸 How It Works
 
 1. User visits the website
