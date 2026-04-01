@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TrendyThreads</title>
+  
+  <link rel="icon" href="TTlogo/favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+  <div class="logo-container">
+  <img src="TTlogo/logo.png" class="logo">
+  <h1>TrendyThreads</h1>
+</div>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#categories">Products</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="video/bg.mp4" type="video/mp4">
+  </video>
+
+  <div class="hero-content">
+    <h1>Style That Speaks</h1>
+    <p>Discover premium fashion at TrendyThreads</p>
+    <button onclick="scrollToProducts()">Shop Now</button>
+  </div>
+</section>
+
+<!-- Categories -->
+<section id="categories" class="categories">
+  <h2>Shop by Category</h2>
+  <div class="category-box">
+  <div class="category-btn active" onclick="filterProducts('all', this)">🛍️ All</div>
+  <div class="category-btn" onclick="filterProducts('women', this)">👗 Women</div>
+  <div class="category-btn" onclick="filterProducts('men', this)">👕 Men</div>
+  <div class="category-btn" onclick="filterProducts('new', this)">🔥 New</div>
+</div>
+</section>
+
+<section class="subcategories" id="subcategories">
+  <h3 id="subTitle">Filter by Type</h3>
+
+  <div class="sub-box" id="subBox">
+
+    
+    <div class="sub women sub-btn" onclick="filterSub('dress', this)">👗 Dress</div>
+<div class="sub women sub-btn" onclick="filterSub('top', this)">👚 Tops</div>
+<div class="sub women sub-btn" onclick="filterSub('womenhoodie', this)">🧥 Hoodie</div>
+<div class="sub women sub-btn" onclick="filterSub('jumpsuit', this)">🧵 Jumpsuit</div>
+
+<div class="sub men sub-btn" onclick="filterSub('shirt', this)">👔 Shirt</div>
+<div class="sub men sub-btn" onclick="filterSub('menhoodie', this)">👕 Hoodie</div>
+<div class="sub men sub-btn" onclick="filterSub('formal', this)">🧑‍💼 Formal</div>
+<div class="sub men sub-btn" onclick="filterSub('set', this)">🧥 2-Piece</div>
+
+  </div>
+</section>
+
+<!-- Products -->
+<section class="products" id="products">
+
+<!-- Elegant Dress -->
+<div class="card" data-category="women dress"
+onclick="openProductDetails(
+  'Elegant Dress',
+  '₹999',
+  'Perfect for parties',
+  'Satin',
+  'S, M, L',
+  'images/dress1.jpg'
+)">
+  
+  <img src="images/dress1.jpg">
+  <h3>Elegant Dress</h3>
+  <p>₹999</p>
+
+  <button onclick="event.stopPropagation(); openProductDetails(
+    'Elegant Dress',
+    '₹999',
+    'Perfect for parties',
+    'Satin',
+    'S, M, L',
+    'images/dress1.jpg'
+  )">
+    Order Now
+  </button>
+
+</div>
+
+<!-- Crop Top -->
+<div class="card" data-category="women top"
+onclick="openProductDetails('Crop Top','₹399','Stylish and comfortable crop top','Ribbed Cotton','S, M, L','images/top1.jpg')">
+  <img src="images/top1.jpg">
+  <h3>Crop Top</h3>
+  <p>₹399</p>
+  <button onclick="event.stopPropagation(); openProductDetails('Crop Top','₹399','Stylish and comfortable crop top','Ribbed Cotton','S, M, L','images/top1.jpg')">
+    Order Now
+  </button>
+</div>
+
+<!-- Hoodie -->
+<div class="card" data-category="women womenhoodie"
+onclick="openProductDetails('Stylish Hoodie','₹449','Warm and trendy hoodie','Cotton Fleece','M, L, XL','images/hoodie1.jpg')">
+  <img src="images/hoodie1.jpg">
+  <h3>Stylish Hoodie</h3>
+  <p>₹449</p>
+  <button onclick="event.stopPropagation(); openProductDetails('Stylish Hoodie','₹449','Warm and trendy hoodie','Cotton Fleece','M, L, XL','images/hoodie1.jpg')">
+    Order Now
+  </button>
+</div>
+
+<!-- Maxi Dress -->
+<div class="card" data-category="women dress"
+onclick="openProductDetails('Maxi Dress','₹1100','Elegant long maxi dress','Chiffon','S, M, L','images/dress2.jpg')">
+  <img src="images/dress2.jpg">
+  <h3>Maxi Dress</h3>
+  <p>₹1100</p>
+  <button onclick="event.stopPropagation(); openProductDetails('Maxi Dress','₹1100','Elegant long maxi dress','Chiffon','S, M, L','images/dress2.jpg')">
+    Order Now
+  </button>
+</div>
+
+<!-- Bodycon -->
+<div class="card" data-category="women dress"
+onclick="openProductDetails('Short Bodycon Dress','₹799','Perfect body-fit party dress','Polyester Spandex','XS, S, M','images/shortbodycon.jpg')">
+  <img src="images/shortbodycon.jpg">
+  <h3>Short Bodycon Dress</h3>
+  <p>₹799</p>
+  <button onclick="event.stopPropagation(); openProductDetails('Short Bodycon Dress','₹799','Perfect body-fit party dress','Polyester Spandex','XS, S, M','images/shortbodycon.jpg')">
+    Order Now
+  </button>
+</div>
+
+<!-- Tank Top -->
+<div class="card" data-category="women top"
+onclick="openProductDetails('Tank Top','₹450','Comfortable daily wear tank top','Stretch Cotton','S, M, L','images/tanktop.jpg')">
+  <img src="images/tanktop.jpg">
+  <h3>Tank Top</h3>
+  <p>₹450</p>
+  <button onclick="event.stopPropagation(); openProductDetails('Tank Top','₹450','Comfortable daily wear tank top','Stretch Cotton','S, M, L','images/tanktop.jpg')">
+    Order Now
+  </button>
+</div>
+
+<!-- Tshirt -->
+<div class="card" data-category="women top"
+onclick="openProductDetails('Tshirt Top','₹580','Casual stylish t-shirt top','Cotton Blend','S, M, L, XL','images/top2tshirt.jpg')">
+  <img src="images/top2tshirt.jpg">
+  <h3>Tshirt Top</h3>
+  <p>₹580</p>
+  <button onclick="event.stopPropagation(); openProductDetails('Tshirt Top','₹580','Casual stylish t-shirt top','Cotton Blend','S, M, L, XL','images/top2tshirt.jpg')">
+    Order Now
+  </button>
+</div>
+
+<!-- Long Sleeve -->
+<div class="card" data-category="women dress"
+onclick="openProductDetails('Long Sleeve Mini Dress','₹1050','Trendy long sleeve mini dress','Satin','S, M, L','images/longSleevemini.jpg')">
+  <img src="images/longSleevemini.jpg">
+  <h3>Long Sleeve Mini Dress</h3>
+  <p>₹1050</p>
+  <button onclick="event.stopPropagation(); openProductDetails('Long Sleeve Mini Dress','₹1050','Trendy long sleeve mini dress','Satin','S, M, L','images/longSleevemini.jpg')">
+    Order Now
+  </button>
+</div>
+
+<!-- Jumpsuit -->
+<div class="card" data-category="women new jumpsuit"
+onclick="openProductDetails('Jumpsuit','₹1500','Stylish modern jumpsuit','Crepe','S, M, L','images/jumpsuit.jpg')">
+  <img src="images/jumpsuit.jpg">
+  <h3>Jumpsuit</h3>
+  <p>₹1500</p>
+  <button onclick="event.stopPropagation(); openProductDetails('Jumpsuit','₹1500','Stylish modern jumpsuit','Crepe','S, M, L','images/jumpsuit.jpg')">
+    Order Now
+  </button>
+</div>
+
+<!-- Jumpsuit 2 -->
+<div class="card" data-category="women new jumpsuit"
+onclick="openProductDetails('Jumpsuit','₹1250','Elegant jumpsuit design','Rayon','S, M, L','images/jumpsuit2.jpg')">
+  <img src="images/jumpsuit2.jpg">
+  <h3>Jumpsuit</h3>
+  <p>₹1250</p>
+  <button onclick="event.stopPropagation(); openProductDetails('Jumpsuit','₹1250','Elegant jumpsuit design','Rayon','S, M, L','images/jumpsuit2.jpg')">
+    Order Now
+  </button>
+</div>
+
+<!-- Cord Set -->
+<div class="card" data-category="women cordset"
+onclick="openProductDetails('Cord Set','₹1800','Premium stylish cord set','Linen Blend','S, M, L','images/cordSet.jpg')">
+  <img src="images/cordSet.jpg">
+  <h3>Cord Set</h3>
+  <p>₹1800</p>
+  <button onclick="event.stopPropagation(); openProductDetails('Cord Set','₹1800','Premium stylish cord set','Linen Blend','S, M, L','images/cordSet.jpg')">
+    Order Now
+  </button>
+</div>
+
+<!-- Cord Set 2 -->
+<div class="card" data-category="women cordset"
+onclick="openProductDetails('Cord Set','₹1650','Trendy matching cord set','Cotton Blend','S, M, L, XL','images/cordset2.jpg')">
+  <img src="images/cordset2.jpg">
+  <h3>Cord Set</h3>
+  <p>₹1650</p>
+  <button onclick="event.stopPropagation(); openProductDetails('Cord Set','₹1650','Trendy matching cord set','Cotton Blend','S, M, L, XL','images/cordset2.jpg')">
+    Order Now
+  </button>
+</div>
+
+  <!-- MEN -->
+
+<!-- Shirt 1 -->
+<div class="card" data-category="men shirt"
+onclick="openProductDetails('White Casual Shirt','₹399','Comfortable casual white shirt','Cotton Linen','M, L, XL','images/whiteshirt.jpg')">
+  <img src="images/whiteshirt.jpg">
+  <h3>White Casual Shirt</h3>
+  <p>₹399</p>
+  <button onclick="event.stopPropagation(); openProductDetails('White Casual Shirt','₹399','Comfortable casual white shirt','Cotton Linen','M, L, XL','images/whiteshirt.jpg')">
+    Order Now
+  </button>
+</div>
+
+<!-- Shirt 2 -->
+<div class="card" data-category="men shirt"
+onclick="openProductDetails('White Shirt','₹499','Stylish formal white shirt','Oxford Cotton','M, L, XL, XXL','images/whiteshirt2.jpg')">
+  <img src="images/whiteshirt2.jpg">
+  <h3>White Shirt</h3>
+  <p>₹499</p>
+  <button onclick="event.stopPropagation(); openProductDetails('White Shirt','₹499','Stylish formal white shirt','Oxford Cotton','M, L, XL, XXL','images/whiteshirt2.jpg')">
+    Order Now
+  </button>
+</div>
+
+<!-- Hoodie 1 -->
+<div class="card" data-category="men menhoodie"
+onclick="openProductDetails('Men Hoodie','₹999','Warm and trendy hoodie','Cotton Fleece','M, L, XL','images/menhoodie1.jpg')">
+  <img src="images/menhoodie1.jpg">
+  <h3>Men Hoodie</h3>
+  <p>₹999</p>
+  <button onclick="event.stopPropagation(); openProductDetails('Men Hoodie','₹999','Warm and trendy hoodie','Cotton Fleece','M, L, XL','images/menhoodie1.jpg')">
+    Order Now
+  </button>
+</div>
+
+<!-- Hoodie 2 -->
+<div class="card" data-category="men menhoodie"
+onclick="openProductDetails('Men Hoodie','₹950','Comfortable everyday hoodie','Poly Cotton Blend','M, L, XL','images/menhoodie2.jpg')">
+  <img src="images/menhoodie2.jpg">
+  <h3>Men Hoodie</h3>
+  <p>₹950</p>
+  <button onclick="event.stopPropagation(); openProductDetails('Men Hoodie','₹950','Comfortable everyday hoodie','Poly Cotton Blend','M, L, XL','images/menhoodie2.jpg')">
+    Order Now
+  </button>
+</div>
+
+<!-- Hoodie 3 -->
+<div class="card" data-category="men menhoodie"
+onclick="openProductDetails('Men Hoodie','₹978','Stylish printed hoodie','Cotton Fleece','M, L, XL','images/menhoodie3.jpg')">
+  <img src="images/menhoodie3.jpg">
+  <h3>Men Hoodie</h3>
+  <p>₹978</p>
+  <button onclick="event.stopPropagation(); openProductDetails('Men Hoodie','₹978','Stylish printed hoodie','Cotton Fleece','M, L, XL','images/menhoodie3.jpg')">
+    Order Now
+  </button>
+</div>
+
+<!-- 2 Piece 1 -->
+<div class="card" data-category="men new set"
+onclick="openProductDetails('Two Piece Set','₹1900','Premium two piece set','Linen Blend','M, L, XL','images/men2peiceset.jpg')">
+  <img src="images/men2peiceset.jpg">
+  <h3>Two Piece Set</h3>
+  <p>₹1900</p>
+  <button onclick="event.stopPropagation(); openProductDetails('Two Piece Set','₹1900','Premium two piece set','Linen Blend','M, L, XL','images/men2peiceset.jpg')">
+    Order Now
+  </button>
+</div>
+
+<!-- 2 Piece 2 -->
+<div class="card" data-category="men new set"
+onclick="openProductDetails('Men Two Piece','₹1200','Stylish casual two piece','Cotton Blend','M, L, XL','images/men2piece1.jpg')">
+  <img src="images/men2piece1.jpg">
+  <h3>Men's Two Piece</h3>
+  <p>₹1200</p>
+  <button onclick="event.stopPropagation(); openProductDetails('Men Two Piece','₹1200','Stylish casual two piece','Cotton Blend','M, L, XL','images/men2piece1.jpg')">
+    Order Now
+  </button>
+</div>
+
+<!-- Formal 1 -->
+<div class="card" data-category="men formal"
+onclick="openProductDetails('Formal Set','₹2000','Elegant formal outfit','Poly Viscose Blend','M, L, XL','images/formals1.jpg')">
+  <img src="images/formals1.jpg">
+  <h3>Formal Set</h3>
+  <p>₹2000</p>
+  <button onclick="event.stopPropagation(); openProductDetails('Formal Set','₹2000','Elegant formal outfit','Poly Viscose Blend','M, L, XL','images/formals1.jpg')">
+    Order Now
+  </button>
+</div>
+
+<!-- Formal 2 -->
+<div class="card" data-category="men formal"
+onclick="openProductDetails('Formal Set','₹1910','Classic formal wear','Poly Viscose Blend','M, L, XL','images/formals2.jpg')">
+  <img src="images/formals2.jpg">
+  <h3>Formal Set</h3>
+  <p>₹1910</p>
+  <button onclick="event.stopPropagation(); openProductDetails('Formal Set','₹1910','Classic formal wear','Poly Viscose Blend','M, L, XL','images/formals2.jpg')">
+    Order Now
+  </button>
+</div>
+
+<!-- Formal 3 -->
+<div class="card" data-category="men formal"
+onclick="openProductDetails('Formal Set','₹2050','Premium formal collection','Poly Viscose Blend','M, L, XL','images/formals3.jpg')">
+  <img src="images/formals3.jpg">
+  <h3>Formal Set</h3>
+  <p>₹2050</p>
+  <button onclick="event.stopPropagation(); openProductDetails('Formal Set','₹2050','Premium formal collection','Poly Viscose Blend','M, L, XL','images/formals3.jpg')">
+    Order Now
+  </button>
+</div>
+</section>
+
+<!-- About -->
+<section class="about" id="about">
+  <h2>About TrendyThreads</h2>
+
+  <p>
+    TrendyThreads is a modern fashion store offering stylish and affordable clothing for both men and women. 
+    Our goal is simple — to bring you the latest fashion trends without compromising on comfort and quality.
+  </p>
+
+  <p>
+    We carefully select every piece in our collection to match current trends while ensuring it feels great to wear. 
+    From everyday casual outfits to special occasion styles, we have something for everyone.
+  </p>
+
+  <p>
+    At TrendyThreads, we believe fashion should be easy and accessible. That’s why we provide a simple ordering process 
+    through WhatsApp, so you can quickly connect with us and place your order without any hassle.
+  </p>
+
+  <p>
+    Customer satisfaction is our priority. We focus on good quality products, fair pricing, and friendly service. 
+    Whether you are updating your wardrobe or looking for something unique, TrendyThreads is here to help you express your style with confidence.
+  </p>
+
+  <p>
+    Stay trendy. Stay confident. ✨
+  </p>
+</section>
+
+<!-- Why Choose Us -->
+<section id="why" class="why">
+  <h2>Why Choose Us</h2>
+  <div class="why-box">
+    <div class="why-card">✨ Latest Fashion Trends</div>
+    <div class="why-card">💰 Affordable Pricing</div>
+    <div class="why-card">🧵 Quality Products</div>
+    <div class="why-card">🔥 Trendy Collections</div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="contact">
+  <h2>Contact Us</h2>
+  <div class="contact-box">
+    <div class="contact-card">📍 Mumbai, India</div>
+    <div class="contact-card">📞 +91 9xxx-xxxxxx</div>
+    <div class="contact-card">📧 trendythreads@gmail.com</div>
+  </div>
+</section>
+
+<!-- Feedback -->
+<section id="feedback" class="feedback">
+  <h2>Customer Feedback</h2>
+  <p>Your feedback helps us improve 💖</p>
+
+ <form class="feedback-form" onsubmit="submitFeedback(event)">
+    
+    <input type="text" name="Name" placeholder="Your Name" required>
+
+    <textarea name="Feedback" placeholder="Write your feedback..." required></textarea>
+
+    <button type="submit">Submit Feedback</button>
+
+  </form>
+</section>
+
+<div id="productPopup" class="product-popup">
+  <div class="product-content">
+
+    <span class="close-btn" onclick="closeProduct()">❌</span>
+
+    <!-- Product Image -->
+    <img id="popupImg" src="" alt="Product Image">
+
+    <!-- Product Details -->
+    <h2 id="popupName"></h2>
+    <h3 id="popupPrice"></h3>
+    <p id="popupDesc"></p>
+
+    <!-- Extra Info -->
+    <p id="popupSizes"></p>
+    <p id="popupMaterial"></p>
+
+    <p style="font-size:12px; color:gray;">
+      *Order will be confirmed via WhatsApp
+    </p>
+
+    <!-- Button -->
+    <button onclick="orderNow()">Order Now</button>
+
+  </div>
+</div>
+<!-- Footer -->
+<footer>
+  <p>© 2026 TrendyThreads</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
