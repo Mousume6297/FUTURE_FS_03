@@ -61,7 +61,7 @@ git clone https://github.com/your-username/trendythreads.git
 
 ## 🌐 Live Demo
 
-👉 https://mousume6297.github.io/FUTURE_FS_03/
+👉 https://mousume6297.github.io/TrendyThreads-Fashion/
 
 Click the link above to explore the website.
 
