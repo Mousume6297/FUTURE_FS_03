@@ -61,7 +61,7 @@ git clone https://github.com/your-username/trendythreads.git
 
 ## 🌐 Live Demo
 
-👉 https://mousume6297.github.io/TrendyThreads-Fashion/
+👉 https://mousume6297.github.io/Codsoft_Task03/
 
 Click the link above to explore the website.
 
